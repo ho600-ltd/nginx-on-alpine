@@ -5,8 +5,8 @@
 # Standard set up Nginx Alpine
 # https://github.com/nginxinc/docker-nginx/blob/dded647966e2a2d09db621d896be6ee682085d5a/stable/alpine/Dockerfile
 
-export NGINX_VERSION=1.18.0
-export NJS_VERSION=0.4.3
+export NGINX_VERSION=1.19.8
+export NJS_VERSION=0.5.2
 export PKG_RELEASE=1
 
 set -x \
