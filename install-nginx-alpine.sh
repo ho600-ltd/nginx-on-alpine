@@ -6,7 +6,7 @@
 # https://github.com/nginxinc/docker-nginx/blob/dded647966e2a2d09db621d896be6ee682085d5a/stable/alpine/Dockerfile
 
 export NGINX_VERSION=1.24.0
-export NJS_VERSION=0.8.0
+export NJS_VERSION=0.7.12
 export PKG_RELEASE=1
 
 set -x \
