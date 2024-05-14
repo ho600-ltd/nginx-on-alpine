@@ -5,8 +5,8 @@
 # Standard set up Nginx Alpine
 # https://github.com/nginxinc/docker-nginx/blob/dded647966e2a2d09db621d896be6ee682085d5a/stable/alpine/Dockerfile
 
-export NGINX_VERSION=1.24.0
-export NJS_VERSION=0.7.12
+export NGINX_VERSION=1.26.0 && export NGINX_HG_VERSION=af67466a39d0
+export NJS_VERSION=0.8.4
 export PKG_RELEASE=1
 
 set -x \
@@ -61,7 +61,7 @@ set -x \
                 && cd ${tempDir} \
                 && hg clone https://hg.nginx.org/pkg-oss \
                 && cd pkg-oss \
-                && hg up -r 51f671a772f4 \
+                && hg up -r ${NGINX_HG_VERSION} \
                 && cd alpine \
                 && make all \
                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk \
