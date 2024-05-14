@@ -57,6 +57,7 @@ set -x \
                 alpine-sdk \
                 findutils \
                 cmake \
+                c-ares \
             && su nobody -s /bin/sh -c " \
                 export HOME=${tempDir} \
                 && cd ${tempDir} \
