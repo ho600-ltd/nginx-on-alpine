@@ -41,6 +41,9 @@ set -x \
             && chown nobody:nobody $tempDir \
             && apk add --no-cache --virtual .build-deps \
                 gcc \
+                cmake \
+                c-ares-dev \
+                re2-dev \
                 libc-dev \
                 make \
                 openssl-dev \
@@ -56,8 +59,6 @@ set -x \
                 bash \
                 alpine-sdk \
                 findutils \
-                cmake \
-                c-ares \
             && su nobody -s /bin/sh -c " \
                 export HOME=${tempDir} \
                 && cd ${tempDir} \
